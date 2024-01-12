@@ -1,21 +1,12 @@
 Hometask #4 (12/10)
 ===================
 
-Vagrant task
-------------
-
-1. Create AWS EC2 instance using ubuntu 22.04 image ami-053b0d53c279acc90
-2. Create user “adminuser”
-3. Set password for “adminuser” (in secure way! see documentation)
-4. Grant for “adminuser” sudoer permission
-5. Create user “poweruser”
-6. Allow poweruser login without password  (see /etc/passwd manual)
-7. Grant for “poweruser” permission for iptables command (see /etc/sudoers man)
-8. Allow “poweruser” to read home directory of “adminuser”
-9. Create softlink to file /etc/mtab in poweruser home directory (see ln manual)
-
 Guide
 -----
+Start instance
+```bash
+./run-and-provision.sh
+```
 
 1. Login to the EC2 instance
 ```bash
@@ -27,7 +18,7 @@ ssh -i ../diana-key-pair.pem ubuntu@ip-address-ec2-instance
 su adminuser
 ```
 
-2. Enter into sudo mode and write password diana again
+3. Enter into sudo mode and write password diana again
 ```bash
 sudo -s
 ```
